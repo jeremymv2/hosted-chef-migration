@@ -4,8 +4,8 @@ Migrate your data off of Hosted Chef to a private Chef server
 ## Assumptions
 There are various assumptions made here, please carefully take these into account as this may not be a one-size-fits-all.
 
-* This is migrating Basic data only (cookbooks, environments, roles, data_bags, nodes, clients)
-  * acls, containers, cookbook_artifacts, groups, policies, policy_groups are not included in this document
+* This is migrating Basic data only (cookbooks, environments, roles, data_bags, nodes, clients, acls)
+  * containers, cookbook_artifacts, groups, policies, policy_groups are not included in this document
 * You utilize an admin user with full privileges on both Chef servers
 * The end goal is to only have to change `chef_server_url` in each node's `client.rb` - keeping existing client certificates.
 
@@ -58,6 +58,7 @@ knife upload --chef-repo-path ~/Devel/ChefProject/migration-repo -c knife_dst_se
 knife upload --chef-repo-path ~/Devel/ChefProject/migration-repo -c knife_dst_server.rb /roles
 knife upload --chef-repo-path ~/Devel/ChefProject/migration-repo -c knife_dst_server.rb /nodes
 knife upload --chef-repo-path ~/Devel/ChefProject/migration-repo -c knife_dst_server.rb /clients
+knife upload --chef-repo-path ~/Devel/ChefProject/migration-repo -c knife_dst_server.rb /acls
 ```
 
 ## Change the chef_server_url
