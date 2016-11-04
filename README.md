@@ -8,7 +8,7 @@ There are various assumptions made here, please carefully take these into accoun
   * containers, cookbook_artifacts, groups, policies, policy_groups are not included in this document
 * You utilize an admin user with full privileges on both Chef servers
 * The end goal is to only have to change `chef_server_url` in each node's `client.rb` - keeping existing client certificates.
-* You are prepared to be reponsible for your own organization's Chef Server.  That server is already monitored (OS + Chef services), backed up,
+* You are prepared to be responsible for your own organization's Chef Server.  That server is already monitored (OS + Chef services), backed up,
 you have ensured network routing from clients -> your Chef Server works, you can manage a linux system,  capacity is appropriately
 planned and accounted for, and it is tuned for the number of clients you're migrating to it.
 
