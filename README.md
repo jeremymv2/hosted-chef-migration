@@ -67,4 +67,4 @@ Take one node from your fleet that you are comfortable testing with and change `
 pointing it a the new target Chef Server.  
 
 Trigger a `chef-client` run on that node - it should converge without issue.
-If it converges, make the `client.rb` change on the rest of your fleet in stages - ensuring that nodes are checking in successfully.
+If it converges, make the `client.rb` change on the rest of your fleet in stages (via cookbook_file, template_file or chef-client cookbook) - ensuring that nodes are checking in successfully.
