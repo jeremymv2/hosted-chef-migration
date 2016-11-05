@@ -48,7 +48,7 @@ EOF
 
 ## Download ALL the objects from Managed Chef Server
 
-Take care to rerefernce the `chef-repo-path` created above.
+Take care to reference the `chef-repo-path` created above.
 ```
 knife download --chef-repo-path ~/Devel/ChefProject/migration-repo -c knife_src_server.rb /
 ```
