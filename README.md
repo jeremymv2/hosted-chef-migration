@@ -68,8 +68,8 @@ knife upload --chef-repo-path ~/Devel/ChefProject/migration-repo -c knife_dst_se
 ## Change the chef_server_url
 
 At this stage, you should have all the base data on the target Chef Server.
-Take one node from your fleet that you are comfortable testing with and change `chef_server_url` in the `client.rb` file
-pointing it a the new target Chef Server.  
+Take one node from your fleet that you are comfortable testing with and change `chef_server_url` in the `client.rb` file,
+pointing it at the new target Chef Server.
 
 Trigger a `chef-client` run on that node - it should converge without issue.
 If it is successful, make the `client.rb` change on the rest of your fleet in stages (via cookbook_file, template_file or chef-client cookbook) - ensuring that nodes are checking in on schedule.
